@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <!--Begin head custom Styles-->
+    <!--Begin head custom Scripts-->
+  </head>
+  <body>
+    <main id="app">
+      <div class="to-do"> 
+        <h2 class="to-do__title">To-do list</h2>
+        <form class="to-do__form" id="toDoForm">
+          <div class="to-do__form--group"> 
+            <label for="addToDoInput">To-do text</label>
+            <input id="toDoAddInput" type="text" name="addToDoInput">
+          </div>
+          <div class="to-do__form--confirm"> 
+            <button id="submitToDoForm" type="submit">Add to-do</button>
+          </div>
+        </form>
+        <div class="to-do__body"> 
+          <div class="to-do__list" id="toDoList"> </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./js/app.js" type="module"></script>
+</html>

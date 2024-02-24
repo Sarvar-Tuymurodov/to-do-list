@@ -27,8 +27,6 @@ let toDoArray = [
 ]
 
 const getFromStorage = () => {
-    if(!(JSON.parse(localStorage.getItem("toDoList")))) return
-
     toDoArray = JSON.parse(localStorage.getItem("toDoList"))
 }
 
