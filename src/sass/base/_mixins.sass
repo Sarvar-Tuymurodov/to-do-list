@@ -1,0 +1,28 @@
+/* Mixins */
+
+//Text short Lines
+=text-shorten($numLines: 1)
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+
+    @supports (-webkit-line-clamp: $numLines)
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: initial
+        display: -webkit-box
+        -webkit-line-clamp: $numLines
+        -webkit-box-orient: vertical
+
+// max width
+=screen($width)
+    @media only screen and (max-width: $width + "px")
+        @content
+
+// font-family 
+=font($alias, $name, $folder)
+    @font-face
+        font-family: $alias
+        src: url("../fonts/" + $folder + "/" + $name + ".woff2") format("woff2")
+        font-weight: normal
+        font-style: normal

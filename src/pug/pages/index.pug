@@ -1,0 +1,16 @@
+extends ../clear.pug
+
+block mainContent 
+    .to-do 
+        h2.to-do__title To-do list
+
+        form.to-do__form#toDoForm
+            .to-do__form--group 
+                label(for="addToDoInput") To-do text
+                input#toDoAddInput(type="text" name="addToDoInput")
+
+            .to-do__form--confirm 
+                button#submitToDoForm(type="submit") Add to-do
+
+        .to-do__body 
+            .to-do__list#toDoList 
